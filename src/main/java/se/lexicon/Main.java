@@ -1,7 +1,10 @@
 package se.lexicon;
 
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+   HelloWorld.printMenu();
+   int additionResult = Calculator.addition(10,5);
+   System.out.printIn(additionResult);
     }
 }

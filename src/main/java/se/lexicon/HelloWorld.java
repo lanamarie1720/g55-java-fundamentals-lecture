@@ -1,5 +1,7 @@
 package se.lexicon;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class HelloWorld {
 
     // Single line comment here
@@ -13,10 +15,11 @@ Multi-line comment here
      * ## Used to create documentation for **Java Codes**
      */
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // sout + Tab
         System.out.println("Hello World!");
 
+        printMenu();
         // Variables
         // [data type] [variableName];
         int speed;
@@ -32,8 +35,106 @@ Multi-line comment here
         double area = 20.55;
         int setNumber = 100;
         int studentId = 5000;
+        System.out.println("Speed: " + speed);
+        System.out.println("-----------------");
 
+        int number1 = 10;
+        int number2 = 5;
 
+        int additionResult = number1 + number2;
+        System.out.println("Addition: " + additionResult);
+
+        int subtractionResult = number1 - number2;
+        System.out.println("Subtraction: " + subtractionResult);
+        // * / %
+        int division = number1 / number2; // returns the quotient
+        System.out.println("Division: " + division);
+        int modules = number1 % number2;
+        System.out.println("Modules: " + modules);
+
+        // Increment (++) and Decrement (--) operators
+        int counter = 0;
+        System.out.println(++counter); // Output : 1
+
+        int num1 = 500, num2 = 200, num3 = 10;
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+
+        // (==, !=, <, >, <=, >=)
+        boolean isEqual = num1 == num2; // false
+        System.out.println("Is Equal: " + isEqual);
+        boolean result = num1 > num2; // true
+        System.out.println("Is Greater Than: " + result);
+
+        int age = 20;
+        if (age >= 18) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            System.out.println("You are not eligible to vote.");
+        }
+
+        int marks = 85;
+        if (marks >= 90) {
+            System.out.println("Grade A");
+        } else if (marks >= 80) {
+            System.out.println("Grade B");
+        } else if (marks >= 70) {
+            System.out.println("Grade C");
+            } else if (marks >= 55 || marks <= 60){
+                System.out.println("Grade FX");
+            } else {
+            System.out.println("Grade F");
+        }
+
+        int dayOfWeek = 10;
+        switch (dayOfWeek) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid Day.");
+        }
+
+        String name = "Mehrdad";
+        String lastName = "Javan";
+        //name = name.concat(" ").concat(lastName); // Mehrdad Javan
+        name = name + " " + lastName; // Mehrdad Javan
+        System.out.println(name); // Mehrdad Javan
+
+        System.out.println("--------------------");
+        Person object1 = new Person();
+        object1.firstName = "Mehrdad";
+        object1.lastName = "Javan";
+
+        Person object2 = new Person();
+        object2.firstName = "Elnaz";
+        object2.lastName = "Azizi";
+
+        System.out.println(object1.fullName()); // Mehrdad Javan
+        System.out.println(object2.fullName()); // Elnaz Azizi
+
+    }
+
+    // Reformat the Code: Ctrl + Alt + L
+
+    // write a method to Print or Display the menu ?
+    public static void printMenu() {
+        System.out.println("Welcome to my calculator App");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("-----------");
+    }
+
+    public static double fahrenheitToCelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
     }
 
 }
